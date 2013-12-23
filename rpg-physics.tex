@@ -3,8 +3,94 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{siunitx}
+\usepackage{units}
 \author{Nathaniel Beaver}
-\title{Physics problems inspired by Dungeons \& Dragons}
+\title{Physics problems inspired by role-playing games like Dungeons \& Dragons}
 \begin{document}
 \maketitle
+
+Initial version from junior year of high school, fall 2006 through early spring 2007.
+
+The difficult level varies between middle school and high school level.
+
+\section{Dungeonmaster headaches: constraints on room dimensions}
+
+You are making a room. Its total area must be 200 square feet (because of an area trap), and one side must be 10 feet longer than the others because of architectural considerations. Find the length of a side.
+
+\subsection{Solution}
+
+\[x(x+10) = 200\]
+\[x^2 + 10x - 200 = 0\]
+\[(x+20)(x-10) = 0\]
+
+Thus $x = 10$ feet, and the room should be $10$ feet $\times$ $20$ feet.
+
+\section{Elongated ooze}
+
+An ooze is chasing a hapless adventurer. The adventurer ducks into a 5 foot by 5 foot crawlspace. If the ooze has a volume of 10 ft by 10 ft by 10 ft = 1,000 $\textrm{ft}^3$, how long will it be once it fully enters the crawlspace?
+
+\subsection{Solution}
+
+\[
+\frac{1000 \textrm{ ft}^2}{1}
+\cdot
+\frac{1}{5 \textrm{ ft}}
+\cdot
+\frac{1}{5 \textrm{ ft}}
+=
+40 \textrm{ feet long}
+\]
+
+The adventurer is advised to use a line-effect spell.
+
+\section{Taking a grenade}
+
+A self-sacrificing adventurer jumps on an exploding magical bomb.
+
+\begin{enumerate}
+\item If the damage at 10 feet is 5 damage and the blast radius is about 2.5 feet, how much damage does the poor guy take, assuming an inverse square law?
+\item If the bomb has an energy of 1 ounce of TNT ($\approx 130$ kJ) and half of it is transferred to upward kinetic energy, how high is the adventurer launched, assuming a mass of 100 kg including equipment?
+\end{enumerate}
+
+% Note: Original version had an energy of 1 kJ, which is way too low, and also got the inverse square wrong (it used an inverse square with exponential decay), so I've corrected them both.
+
+\subsection{Solution}
+
+%TODO use siunitx to clean this up.
+
+\begin{enumerate}
+\item The radius is $10/2.5 = 4$ times smaller, so the damage is $4^2 = 16$ times greater, or $16 \times 5 = 80$. (Note that this assumes the adventurer absorbs all the energy and limits the blast radius to a hemisphere five feet across, which isn't very realistic, but see next part.)
+\item $\frac{1}{2} 130$ kJ imparted to 100 kg gives a velocity of $v = \sqrt{2 E/m} = \sqrt{2 65 \textrm{kJ} / 100 \textrm{kg}} \approx 36 \textrm{m/s}$, which will top out at $y = v_0^2 / 2g = (36 \textrm{m/s})^2/ 2 9.8 \textrm{m/s}^2 = 66 \textrm{ meters} = 216 \textrm{ feet}$.
+\end{enumerate}
+
+\section{Electric trap}
+
+% The original problem gave a contact time and asked for total charge, but I think this version makes more sense.
+
+Drinort the kobold rogue has just finished swimming across an underground lake to get to some treasure. Unfortunately, in his haste, he neglects to check for traps. If the trap's potential difference is 60 VDC and Drinort's resistance is only 1000 Ohms since he is wet, how much current flows through his warty body?
+
+\subsection{Solution}
+
+\[I = \frac{V}{R} \]
+
+\[I = \frac{60 V}{1000 \Omega}\]
+
+Thus $I = 60$ mA, which will definitely cause involuntary muscular contractions and could trigger cardiac arrest.
+
+\section{Sandworm escape}
+
+Our hapless adventurer is being chased by a sandworm. He is running towards a small crevice in a nearby cliff, where the worm cannot reach. If the worm can move at 40 ft/s, the adventurer has a 30 ft head start, and the adventurer still needs to run another 100 feet to reach the cliffs, how fast must the adventurer run to reach the cliffs before the sandworm?
+
+\subsection{Solution}
+\[t_{worm} = \frac{130 \textrm{ft}}{40 \textrm{ft/s}}\]
+\[t_{adventurer} = \frac{100 \textrm{ft}}{v_{adventurer}}\]
+\[t_{worm} = t_{adventurer} \implies v_{adventurer} = 40 \textrm{ft/s} \frac{100 \textrm{ft}}{130 \textrm{ft}} \]
+Thus $v_{adventurer} \geq$ 30.7 ft/s or roughly 21 miles per hour.
+
+\subsection{Addendum}
+Trained Olympic sprinters can hit this speed on 100 meter dashes and the like;
+Usain Bolt reached nearly 28 mph and averaged over 23 mph on a 100 meter dash.
+The adventurer only has to keep it up for 30.5 meters and is running to save his skin, but it will still be a tough haul.
+
 \end{document}
