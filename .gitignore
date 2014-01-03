@@ -18,4 +18,6 @@
 *.ods#
 *.csv#
 # Ignore other temp files
-.md~
+*.md~
+# Ignore html files, since hevea automatically generates them from the tex file.
+*.html
