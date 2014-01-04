@@ -2,6 +2,8 @@
 
 These are physics problems inspired by role-playing games like Dungeons & Dragons.
 
+You can browse them as [html](https://rawgithub.com/nbeaver/rpg-physics/master/rpg-physics.html) or [pdf](./rpg-physics.pdf).
+
 I actually started working on them when tutoring algebra students in high school.
 
 The difficult level varies between middle school and college level,
