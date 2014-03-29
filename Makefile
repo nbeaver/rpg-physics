@@ -1,9 +1,11 @@
 NAME = rpg-physics
 
-$(NAME).pdf: $(NAME).tex
+all: $(NAME).pdf $(NAME).html
+
+$(NAME).pdf : $(NAME).tex
 	pdflatex $(NAME).tex
 
-$(NAME).html: $(NAME).tex
+$(NAME).html : $(NAME).tex
 	hevea $(NAME).tex
 
 clean:
