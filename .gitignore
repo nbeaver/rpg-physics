@@ -1,23 +1,25 @@
-# Ignore vim swap files
-*.swp
-# Ignore LaTeX temp files
+# Auxiliary files
 *.aux
 *.bbl
 *.blg
-# Log files clutter merges, so a good commit shouldn't included the log file. Only add if the build is wrong and the relevant error needs to be tracked.
 *.log
+*.nav
 *.out
+*.snm
 *.synctex.gz
-# Ignore LaTeX output files
-*.pdf
+*.synctex.gz(busy)
+*.toc
+
+# Viewable output files
 *.dvi
+*.pdf
 *.ps
-# Ignore Open Document spreadsheets
-*.ods
-# Ignore LibreOffice lock files, e.g. .~lock.name_of_spreadsheet.ods#
-*.ods#
-*.csv#
-# Ignore other temp files
-*.md~
-# Ignore html files, since hevea automatically generates them from the tex file.
-*.html
+
+# Text editor temp files,
+# so you can still commit with the text editor open.
+*.swp
+*.txt~
+
+# LatexMk files.
+*.fls
+*.fdb_latexmk
