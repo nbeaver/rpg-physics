@@ -1,16 +1,19 @@
-NAME = rpg-physics
+.PHONY: all clean wordcount
 
-all: $(NAME).pdf $(NAME).html
+LATEX = $(wildcard *.tex)
+PDF=$(patsubst %.tex, %.pdf, $(LATEX))
 
-$(NAME).pdf : $(NAME).tex
-	pdflatex $(NAME).tex
+all : $(PDF)
 
-$(NAME).html : $(NAME).tex
-	hevea $(NAME).tex
+%.pdf : %.tex
+	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make $<
 
-clean:
-	rm --force $(NAME).dvi
-	rm --force $(NAME).pdf
-	rm --force $(NAME).html
-	rm --force $(NAME).log
-	rm --force $(NAME).aux
+project.zip : Makefile $(LATEX)
+	zip $@ $^
+
+wordcount : $(TEX)
+	texcount $(TEX)
+
+clean :
+	latexmk -C
+	rm -f project.zip
