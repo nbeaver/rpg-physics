@@ -1,0 +1,2 @@
+- [ ] Switch from rawgit link to github pages
+- [ ] Track PDF file so it can be previewed in Github.
